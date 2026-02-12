@@ -175,9 +175,9 @@ duration: 'Sessions typically 30-35 minutes',
               <motion.div
                 key={service.id}
                 id={service.id}
-                className={`bg-white rounded-3xl shadow-lg overflow-hidden border border-sky-100 ${
+                className={`bg-white rounded-3xl shadow-lg overflow-hidden border border-sky-100 flex flex-col ${
                   index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                } flex flex-col`}
+                }`}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

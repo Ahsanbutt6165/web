@@ -1,10 +1,6 @@
 import { motion } from 'framer-motion';
 
 const BookAppointment = () => {
-  const emailAddress = 'info@psychhealclinic.com'; // Replace with your actual email
-  const emailSubject = 'Appointment Booking Request';
-  const emailBody = 'Hello, I would like to book an appointment for my child. Please let me know your available dates and times.';
-
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}

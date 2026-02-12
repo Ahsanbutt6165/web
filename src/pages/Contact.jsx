@@ -1,11 +1,8 @@
 import { motion } from 'framer-motion';
 
 const Contact = () => {
-  const mapUrl = 'https://www.google.com/maps/search/?api=1&query=St+6+Sector+A+Bahria+Enclave+Islamabad';
+  const mapUrl = 'https://maps.app.goo.gl/rMNYu5GipfEnmfNb8';
   const address = 'St#6, Sector A, Bahria Enclave, Islamabad';
-//   const emailAddress = 'info@psychhealclinic.com'; // Replace with your actual email
-//   const emailSubject = 'Inquiry from Website';
-//   const emailBody = 'Hello, I would like to inquire about your services.';
 
   return (
     <div className="min-h-screen bg-white">
@@ -33,12 +30,8 @@ const Contact = () => {
         </motion.div>
       </section>
 
-      {/* Contact Information */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-
-             {/* Quick Contact Options */}
-      <section className="py-10 bg-gradient-to-b from-white to-sky-50/30">
+      {/* Quick Contact Options */}
+      <section className="py-16 bg-gradient-to-b from-white to-sky-50/30">
         <div className="container mx-auto px-4">
           <motion.div
             className="max-w-4xl mx-auto text-center"
@@ -53,7 +46,7 @@ const Contact = () => {
             <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
               We're here to help! Reach out to us through any of these convenient ways. Click on any option below to get in touch instantly.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
               <motion.a
                 href="tel:+923115367440"
@@ -86,28 +79,44 @@ const Contact = () => {
                 <p className="text-sky-600 font-medium text-lg">0330-3866245</p>
                 <p className="text-gray-500 text-sm mt-2">Click to chat on WhatsApp</p>
               </motion.a>
-
-
             </div>
           </motion.div>
         </div>
       </section>
 
-          {/* Map */}
-          <div className="mt-10 rounded-2xl overflow-hidden shadow-lg bg-gray-100 flex items-center justify-center" style={{ height: '450px' }}>
-            <div className="text-center p-8">
-              <div className="text-6xl mb-4">📍</div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">{address}</h3>
-              <p className="text-gray-600 mb-6">View our location on Google Maps</p>
-              <a
-                href={mapUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-gradient-to-r from-sky-600 via-cyan-500 to-teal-500 text-white px-6 py-3 rounded-full font-semibold hover:from-sky-700 hover:via-cyan-600 hover:to-teal-600 transition-all shadow-lg hover:shadow-xl"
-              >
-                Open in Google Maps
-              </a>
-            </div>
+      {/* Map */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.h2
+            className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-sky-600 to-cyan-600 bg-clip-text text-transparent text-center mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            Our Location
+          </motion.h2>
+          <div className="rounded-2xl overflow-hidden shadow-lg" style={{ height: '450px' }}>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3318.812!2d73.2074137!3d33.6902204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfe9006b316dd9%3A0x12447806a836ad98!2sPsych%20Heal!5e0!3m2!1sen!2spk"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Psych Heal Clinic Location"
+            ></iframe>
+          </div>
+          <div className="text-center mt-6">
+            <p className="text-lg font-semibold text-gray-800 mb-2">{address}</p>
+            <a
+              href={mapUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-gradient-to-r from-sky-600 via-cyan-500 to-teal-500 text-white px-6 py-3 rounded-full font-semibold hover:from-sky-700 hover:via-cyan-600 hover:to-teal-600 transition-all shadow-lg hover:shadow-xl mt-2"
+            >
+              Get Directions
+            </a>
           </div>
         </div>
       </section>
