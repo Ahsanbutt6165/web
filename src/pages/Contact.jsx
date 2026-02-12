@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-sky-600 via-cyan-500 to-teal-400 py-20 text-white relative overflow-hidden">
+      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-teal-700 py-20 text-white relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
             className="absolute top-10 right-10 w-64 h-64 bg-white/10 rounded-full blur-3xl"
@@ -31,7 +31,7 @@ const Contact = () => {
       </section>
 
       {/* Quick Contact Options */}
-      <section className="py-16 bg-gradient-to-b from-white to-sky-50/30">
+      <section className="py-16 bg-gradient-to-b from-white to-blue-50/30">
         <div className="container mx-auto px-4">
           <motion.div
             className="max-w-4xl mx-auto text-center"
@@ -40,7 +40,7 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-sky-600 to-cyan-600 bg-clip-text text-transparent mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-900 to-teal-600 bg-clip-text text-transparent mb-6">
               Choose Your Preferred Contact Method
             </h2>
             <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
@@ -50,7 +50,7 @@ const Contact = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
               <motion.a
                 href="tel:+923115367440"
-                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-sky-100 group"
+                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-blue-100 group"
                 whileHover={{ y: -10, scale: 1.02 }}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -58,8 +58,8 @@ const Contact = () => {
                 transition={{ delay: 0.1 }}
               >
                 <div className="text-5xl mb-4">📞</div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-2 group-hover:text-sky-600 transition-colors">Call Us</h3>
-                <p className="text-sky-600 font-medium text-lg">0311-5367440</p>
+                <h3 className="text-xl font-semibold text-gray-800 mb-2 group-hover:text-blue-900 transition-colors">Call Us</h3>
+                <p className="text-blue-900 font-medium text-lg">0311-5367440</p>
                 <p className="text-gray-500 text-sm mt-2">Click to call directly</p>
               </motion.a>
 
@@ -67,7 +67,7 @@ const Contact = () => {
                 href="https://wa.me/923303866245?text=Hello, I would like to inquire about your services"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-sky-100 group"
+                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-blue-100 group"
                 whileHover={{ y: -10, scale: 1.02 }}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -75,8 +75,8 @@ const Contact = () => {
                 transition={{ delay: 0.2 }}
               >
                 <div className="text-5xl mb-4">💬</div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-2 group-hover:text-sky-600 transition-colors">WhatsApp</h3>
-                <p className="text-sky-600 font-medium text-lg">0330-3866245</p>
+                <h3 className="text-xl font-semibold text-gray-800 mb-2 group-hover:text-blue-900 transition-colors">WhatsApp</h3>
+                <p className="text-blue-900 font-medium text-lg">0330-3866245</p>
                 <p className="text-gray-500 text-sm mt-2">Click to chat on WhatsApp</p>
               </motion.a>
             </div>
@@ -88,7 +88,7 @@ const Contact = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <motion.h2
-            className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-sky-600 to-cyan-600 bg-clip-text text-transparent text-center mb-8"
+            className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-900 to-teal-600 bg-clip-text text-transparent text-center mb-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -113,7 +113,7 @@ const Contact = () => {
               href={mapUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-gradient-to-r from-sky-600 via-cyan-500 to-teal-500 text-white px-6 py-3 rounded-full font-semibold hover:from-sky-700 hover:via-cyan-600 hover:to-teal-600 transition-all shadow-lg hover:shadow-xl mt-2"
+              className="inline-block bg-gradient-to-r from-blue-900 via-blue-800 to-teal-600 text-white px-6 py-3 rounded-full font-semibold hover:from-blue-950 hover:to-teal-700 transition-all shadow-lg hover:shadow-xl mt-2"
             >
               Get Directions
             </a>
@@ -124,7 +124,7 @@ const Contact = () => {
      
 
       {/* Office Hours */}
-      <section className="py-10 bg-gradient-to-b from-white to-sky-50/30">
+      <section className="py-10 bg-gradient-to-b from-white to-blue-50/30">
         <div className="container mx-auto px-4">
           <motion.div
             className="max-w-4xl mx-auto"
@@ -134,7 +134,7 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
           >
             <motion.h2
-              className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-sky-600 to-cyan-600 bg-clip-text text-transparent text-center mb-8"
+              className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-900 to-teal-600 bg-clip-text text-transparent text-center mb-8"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -142,7 +142,7 @@ const Contact = () => {
               Office Hours
             </motion.h2>
             <motion.div
-              className="bg-gradient-to-br from-sky-50 to-cyan-50 p-8 rounded-2xl text-center border border-sky-100"
+              className="bg-gradient-to-br from-blue-50 to-teal-50 p-8 rounded-2xl text-center border border-blue-100"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

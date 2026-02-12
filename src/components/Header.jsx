@@ -32,7 +32,7 @@ const Header = () => {
           >
             <Link to="/" className="flex items-center space-x-3">
               <motion.div
-                className="w-12 h-12 bg-gradient-to-br from-sky-500 via-cyan-400 to-teal-400 rounded-full flex items-center justify-center shadow-lg"
+                className="w-12 h-12 bg-gradient-to-br from-blue-800 to-teal-500 rounded-full flex items-center justify-center shadow-lg"
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.6 }}
               >
@@ -42,7 +42,7 @@ const Header = () => {
                 </svg>
               </motion.div>
               <div>
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-sky-600 to-cyan-600 bg-clip-text text-transparent">Psych Heal Clinic</h1>
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-900 to-teal-600 bg-clip-text text-transparent">Psych Heal Clinic</h1>
                 <p className="text-xs text-gray-600">Every Child Has a Voice</p>
               </div>
             </Link>
@@ -61,8 +61,8 @@ const Header = () => {
                   to={item.path}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
                     isActive(item.path)
-                      ? 'bg-gradient-to-r from-sky-500 to-cyan-500 text-white shadow-lg'
-                      : 'text-gray-700 hover:bg-gradient-to-r hover:from-sky-50 hover:to-cyan-50'
+                      ? 'bg-gradient-to-r from-blue-800 to-teal-600 text-white shadow-lg'
+                      : 'text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-teal-50'
                   }`}
                 >
                   {item.label}
@@ -74,7 +74,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <motion.button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-sky-50"
+            className="md:hidden p-2 rounded-lg hover:bg-blue-50"
             aria-label="Toggle menu"
             whileTap={{ scale: 0.9 }}
           >
@@ -117,8 +117,8 @@ const Header = () => {
                     onClick={() => setIsMenuOpen(false)}
                     className={`block px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
                       isActive(item.path)
-                        ? 'bg-gradient-to-r from-sky-500 to-cyan-500 text-white shadow-lg'
-                        : 'text-gray-700 hover:bg-gradient-to-r hover:from-sky-50 hover:to-cyan-50'
+                        ? 'bg-gradient-to-r from-blue-800 to-teal-600 text-white shadow-lg'
+                        : 'text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-teal-50'
                     }`}
                   >
                     {item.label}

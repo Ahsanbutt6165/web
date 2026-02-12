@@ -144,7 +144,7 @@ duration: 'Sessions typically 30-35 minutes',
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-sky-600 via-cyan-500 to-teal-400 py-20 text-white relative overflow-hidden">
+      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-teal-700 py-20 text-white relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
             className="absolute top-10 right-10 w-64 h-64 bg-white/10 rounded-full blur-3xl"
@@ -175,7 +175,7 @@ duration: 'Sessions typically 30-35 minutes',
               <motion.div
                 key={service.id}
                 id={service.id}
-                className={`bg-white rounded-3xl shadow-lg overflow-hidden border border-sky-100 flex flex-col ${
+                className={`bg-white rounded-3xl shadow-lg overflow-hidden border border-blue-100 flex flex-col ${
                   index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                 }`}
                 initial={{ opacity: 0, y: 50 }}
@@ -185,7 +185,7 @@ duration: 'Sessions typically 30-35 minutes',
                 whileHover={{ shadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)" }}
               >
                 <motion.div
-                  className={`${index % 2 === 0 ? 'md:w-1/3' : 'md:w-1/3'} w-full bg-gradient-to-br from-sky-500 via-cyan-400 to-teal-400 flex items-center justify-center p-8`}
+                  className={`${index % 2 === 0 ? 'md:w-1/3' : 'md:w-1/3'} w-full bg-gradient-to-br from-blue-800 via-blue-700 to-teal-500 flex items-center justify-center p-8`}
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
                 >
@@ -198,7 +198,7 @@ duration: 'Sessions typically 30-35 minutes',
                   </motion.div>
                 </motion.div>
                 <div className={`${index % 2 === 0 ? 'md:w-2/3' : 'md:w-2/3'} w-full p-8 md:p-12`}>
-                  <h2 className="text-3xl font-bold bg-gradient-to-r from-sky-600 to-cyan-600 bg-clip-text text-transparent mb-4">{service.title}</h2>
+                  <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-900 to-teal-600 bg-clip-text text-transparent mb-4">{service.title}</h2>
                   <p className="text-lg text-gray-600 mb-6">{service.description}</p>
                   
                   <div className="space-y-4">
@@ -236,7 +236,7 @@ duration: 'Sessions typically 30-35 minutes',
                       <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                         <Link
                           to="/book-appointment"
-                          className="inline-block bg-gradient-to-r from-sky-600 via-cyan-500 to-teal-500 text-white px-6 py-3 rounded-full font-semibold hover:from-sky-700 hover:via-cyan-600 hover:to-teal-600 transition-all shadow-lg hover:shadow-xl"
+                          className="inline-block bg-gradient-to-r from-blue-900 via-blue-800 to-teal-600 text-white px-6 py-3 rounded-full font-semibold hover:from-blue-950 hover:to-teal-700 transition-all shadow-lg hover:shadow-xl"
                         >
                           Book This Service
                         </Link>
@@ -251,10 +251,10 @@ duration: 'Sessions typically 30-35 minutes',
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-gradient-to-r from-sky-600 via-cyan-500 to-teal-400 text-white relative overflow-hidden">
+      <section className="py-16 bg-gradient-to-r from-blue-900 via-blue-800 to-teal-700 text-white relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
-            className="absolute bottom-0 right-0 w-96 h-96 bg-emerald-300/10 rounded-full blur-3xl"
+            className="absolute bottom-0 right-0 w-96 h-96 bg-teal-300/10 rounded-full blur-3xl"
             animate={{ scale: [1, 1.4, 1], x: [0, -50, 0] }}
             transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
           />
@@ -276,7 +276,7 @@ duration: 'Sessions typically 30-35 minutes',
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
                 to="/contact"
-                className="inline-block bg-white text-sky-600 px-8 py-3 rounded-full font-semibold shadow-xl hover:shadow-2xl transition-all duration-300"
+                className="inline-block bg-white text-blue-900 px-8 py-3 rounded-full font-semibold shadow-xl hover:shadow-2xl transition-all duration-300"
               >
                 Contact Us
               </Link>

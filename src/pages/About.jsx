@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-sky-600 via-cyan-500 to-teal-400 py-20 text-white relative overflow-hidden">
+      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-teal-700 py-20 text-white relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
             className="absolute top-10 right-10 w-64 h-64 bg-white/10 rounded-full blur-3xl"
@@ -33,13 +33,13 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <motion.div
-              className="bg-gradient-to-br from-sky-50 via-cyan-50 to-teal-50 p-8 md:p-12 rounded-3xl border-l-4 border-sky-500 mb-12 shadow-lg"
+              className="bg-gradient-to-br from-blue-50 to-teal-50 p-8 md:p-12 rounded-3xl border-l-4 border-teal-500 mb-12 shadow-lg"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-sky-600 to-cyan-600 bg-clip-text text-transparent mb-6 text-center">
+              <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-900 to-teal-600 bg-clip-text text-transparent mb-6 text-center">
                 Our Mission
               </h2>
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed text-center">
@@ -65,7 +65,7 @@ const About = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
                   >
-                    <span className="text-sky-600 mr-3 font-bold">✓</span>
+                    <span className="text-teal-600 mr-3 font-bold">✓</span>
                     <span><strong>Compassion:</strong> We approach every child and family with empathy, understanding, and genuine care.</span>
                   </motion.li>
                   <motion.li
@@ -75,7 +75,7 @@ const About = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
                   >
-                    <span className="text-sky-600 mr-3 font-bold">✓</span>
+                    <span className="text-teal-600 mr-3 font-bold">✓</span>
                     <span><strong>Excellence:</strong> We maintain the highest standards in our therapeutic interventions and care delivery.</span>
                   </motion.li>
                   <motion.li
@@ -85,7 +85,7 @@ const About = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
                   >
-                    <span className="text-sky-600 mr-3 font-bold">✓</span>
+                    <span className="text-teal-600 mr-3 font-bold">✓</span>
                     <span><strong>Inclusion:</strong> We celebrate diversity and ensure every child feels valued and respected.</span>
                   </motion.li>
                   <motion.li
@@ -95,7 +95,7 @@ const About = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
                   >
-                    <span className="text-sky-600 mr-3 font-bold">✓</span>
+                    <span className="text-teal-600 mr-3 font-bold">✓</span>
                     <span><strong>Collaboration:</strong> We work closely with families, schools, and other professionals to ensure comprehensive support.</span>
                   </motion.li>
                   <motion.li
@@ -105,7 +105,7 @@ const About = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
                   >
-                    <span className="text-sky-600 mr-3 font-bold">✓</span>
+                    <span className="text-teal-600 mr-3 font-bold">✓</span>
                     <span><strong>Growth:</strong> We believe in continuous learning and improvement to better serve our community.</span>
                   </motion.li>
                 </ul>
@@ -116,10 +116,10 @@ const About = () => {
       </section>
 
       {/* Our Approach */}
-      <section className="py-16 bg-gradient-to-b from-white to-sky-50/30">
+      <section className="py-16 bg-gradient-to-b from-white to-blue-50/30">
         <div className="container mx-auto px-4">
           <motion.h2
-            className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-sky-600 to-cyan-600 bg-clip-text text-transparent text-center mb-12"
+            className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-900 to-teal-600 bg-clip-text text-transparent text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -134,7 +134,7 @@ const About = () => {
             ].map((item, index) => (
               <motion.div
                 key={item.title}
-                className="bg-white p-6 rounded-2xl shadow-lg text-center border border-sky-100"
+                className="bg-white p-6 rounded-2xl shadow-lg text-center border border-blue-100"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -148,7 +148,7 @@ const About = () => {
                 >
                   {item.icon}
                 </motion.div>
-                <h3 className="text-xl font-semibold text-sky-700 mb-3">{item.title}</h3>
+                <h3 className="text-xl font-semibold text-blue-900 mb-3">{item.title}</h3>
                 <p className="text-gray-600">
                   {item.desc}
                 </p>
@@ -161,14 +161,14 @@ const About = () => {
       {/* Team Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-900 to-teal-600 bg-clip-text text-transparent text-center mb-12">
             Our Team
           </h2>
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-lg text-gray-600 mb-8">
               Our dedicated team of experienced child psychologists, therapists, and support staff are passionate about helping children succeed. We bring years of expertise, warm hearts, and a commitment to excellence.
             </p>
-            <div className="bg-gray-50 p-8 rounded-2xl">
+            <div className="bg-gradient-to-br from-blue-50 to-teal-50 p-8 rounded-2xl border border-blue-100">
               <p className="text-gray-600 italic">
                 "We are a team of compassionate professionals dedicated to creating positive change in children's lives. Our multidisciplinary approach ensures comprehensive care for every child we serve."
               </p>
@@ -178,13 +178,13 @@ const About = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gradient-to-b from-white to-blue-50/30">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-900 to-teal-600 bg-clip-text text-transparent text-center mb-12">
             What Families Say
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white p-6 rounded-2xl shadow-md">
+            <div className="bg-white p-6 rounded-2xl shadow-lg border border-blue-100">
               <div className="flex items-center mb-4">
                 <div className="text-yellow-400 text-xl">⭐⭐⭐⭐⭐</div>
               </div>
@@ -193,7 +193,7 @@ const About = () => {
               </p>
               <p className="text-gray-800 font-semibold">— Parent of a 6-year-old</p>
             </div>
-            <div className="bg-white p-6 rounded-2xl shadow-md">
+            <div className="bg-white p-6 rounded-2xl shadow-lg border border-blue-100">
               <div className="flex items-center mb-4">
                 <div className="text-yellow-400 text-xl">⭐⭐⭐⭐⭐</div>
               </div>
@@ -207,10 +207,10 @@ const About = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-gradient-to-r from-sky-600 via-cyan-500 to-teal-400 text-white relative overflow-hidden">
+      <section className="py-16 bg-gradient-to-r from-blue-900 via-blue-800 to-teal-700 text-white relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
-            className="absolute bottom-0 right-0 w-96 h-96 bg-emerald-300/10 rounded-full blur-3xl"
+            className="absolute bottom-0 right-0 w-96 h-96 bg-teal-300/10 rounded-full blur-3xl"
             animate={{ scale: [1, 1.4, 1], x: [0, -50, 0] }}
             transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
           />
@@ -232,7 +232,7 @@ const About = () => {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
                 to="/book-appointment"
-                className="inline-block bg-white text-sky-600 px-8 py-3 rounded-full font-semibold shadow-xl hover:shadow-2xl transition-all duration-300"
+                className="inline-block bg-white text-teal-600 px-8 py-3 rounded-full font-semibold shadow-xl hover:shadow-2xl transition-all duration-300"
               >
                 Book Appointment
               </Link>

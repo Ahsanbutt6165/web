@@ -42,7 +42,7 @@ const Footer = () => {
               whileHover={{ scale: 1.05 }}
             >
               <motion.div
-                className="w-10 h-10 bg-gradient-to-br from-sky-500 via-cyan-400 to-teal-400 rounded-full flex items-center justify-center shadow-lg"
+                className="w-10 h-10 bg-gradient-to-br from-blue-800 to-teal-500 rounded-full flex items-center justify-center shadow-lg"
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.6 }}
               >
@@ -50,7 +50,7 @@ const Footer = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
               </motion.div>
-              <h3 className="text-xl font-bold bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent">Psych Heal Clinic</h3>
+              <h3 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">Psych Heal Clinic</h3>
             </motion.div>
             <p className="text-sm italic text-gray-400">Every Child Has a Voice - We Help Them Find It</p>
           </motion.div>
@@ -75,7 +75,7 @@ const Footer = () => {
                 >
                   <Link
                     to={link.path}
-                    className="hover:text-cyan-400 transition-colors duration-300 inline-block"
+                    className="hover:text-teal-400 transition-colors duration-300 inline-block"
                   >
                     {link.label}
                   </Link>
@@ -89,7 +89,7 @@ const Footer = () => {
             <h4 className="text-white font-semibold mb-4">Contact Us</h4>
             <ul className="space-y-2 text-sm">
               <motion.li whileHover={{ x: 5 }}>
-                <a href="tel:+923115367440" className="hover:text-cyan-400 transition-colors duration-300">
+                <a href="tel:+923115367440" className="hover:text-teal-400 transition-colors duration-300">
                   Phone: 0311-5367440
                 </a>
               </motion.li>
@@ -98,7 +98,7 @@ const Footer = () => {
                   href="https://wa.me/923303866245" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="hover:text-cyan-400 transition-colors duration-300"
+                  className="hover:text-teal-400 transition-colors duration-300"
                 >
                   WhatsApp: 0330-3866245
                 </a>
