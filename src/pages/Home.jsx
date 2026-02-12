@@ -148,7 +148,7 @@ const Home = () => {
       </section>
 
       {/* Stats */}
-      <section className="py-20 bg-gradient-to-b from-indigo-50/30 to-white">
+      <section className="py-5 bg-gradient-to-b from-indigo-50/30 to-white">
         <motion.div
           className="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8"
           variants={containerVariants}
@@ -200,10 +200,10 @@ const Home = () => {
             viewport={{ once: true }}
           >
             {services.map((s, i) => (
-              <motion.div key={i} variants={itemVariants}>
+              <motion.div  key={i} variants={itemVariants}>
                 <Link
                   to={s.link}
-                  className="block bg-gradient-to-br from-white to-sky-50/50 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-sky-100 group"
+                  className="block bg-gradient-to-br from-white to-sky-50/50 rounded-2xl p-6 shadow-lg min-h-54 hover:shadow-2xl transition-all duration-300 border border-sky-100 group"
                 >
                   <motion.div
                     className="text-4xl mb-4"

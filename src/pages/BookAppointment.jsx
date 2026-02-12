@@ -118,11 +118,11 @@ const BookAppointment = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
                 <div>
                   <p className="font-semibold text-gray-800 mb-2">Monday - Friday</p>
-                  <p className="text-gray-600">9:00 AM - 6:00 PM</p>
+                  <p className="text-gray-600">9:00 AM - 4:00 PM</p>
                 </div>
                 <div>
                   <p className="font-semibold text-gray-800 mb-2">Saturday</p>
-                  <p className="text-gray-600">10:00 AM - 4:00 PM</p>
+                  <p className="text-gray-600">Closed</p>
                 </div>
                 <div>
                   <p className="font-semibold text-gray-800 mb-2">Sunday</p>

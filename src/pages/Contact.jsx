@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 const Contact = () => {
   const mapUrl = 'https://www.google.com/maps/search/?api=1&query=St+6+Sector+A+Bahria+Enclave+Islamabad';
   const address = 'St#6, Sector A, Bahria Enclave, Islamabad';
-  const emailAddress = 'info@psychhealclinic.com'; // Replace with your actual email
-  const emailSubject = 'Inquiry from Website';
-  const emailBody = 'Hello, I would like to inquire about your services.';
+//   const emailAddress = 'info@psychhealclinic.com'; // Replace with your actual email
+//   const emailSubject = 'Inquiry from Website';
+//   const emailBody = 'Hello, I would like to inquire about your services.';
 
   return (
     <div className="min-h-screen bg-white">
@@ -36,113 +36,9 @@ const Contact = () => {
       {/* Contact Information */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {/* Phone */}
-            <motion.div
-              className="bg-gradient-to-br from-white to-sky-50/50 p-6 rounded-2xl text-center hover:shadow-xl transition-all border border-sky-100"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              whileHover={{ y: -10, scale: 1.05 }}
-            >
-              <motion.div
-                className="text-5xl mb-4"
-                whileHover={{ scale: 1.2, rotate: 5 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                📞
-              </motion.div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">Phone</h3>
-              <motion.a
-                href="tel:+923115367440"
-                className="text-sky-600 hover:text-cyan-600 font-medium text-lg inline-block"
-                whileHover={{ scale: 1.1 }}
-              >
-                0311-5367440
-              </motion.a>
-            </motion.div>
 
-            {/* WhatsApp */}
-            <motion.div
-              className="bg-gradient-to-br from-white to-sky-50/50 p-6 rounded-2xl text-center hover:shadow-xl transition-all border border-sky-100"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              whileHover={{ y: -10, scale: 1.05 }}
-            >
-              <motion.div
-                className="text-5xl mb-4"
-                whileHover={{ scale: 1.2, rotate: -5 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                💬
-              </motion.div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">WhatsApp</h3>
-              <motion.a
-                href="https://wa.me/923303866245?text=Hello, I would like to inquire about your services"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sky-600 hover:text-cyan-600 font-medium text-lg inline-block"
-                whileHover={{ scale: 1.1 }}
-              >
-                0330-3866245
-              </motion.a>
-            </motion.div>
-
-         
-
-            {/* Address */}
-            <motion.div
-              className="bg-gradient-to-br from-white to-sky-50/50 p-6 rounded-2xl text-center hover:shadow-xl transition-all border border-sky-100"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-              whileHover={{ y: -10, scale: 1.05 }}
-            >
-              <motion.div
-                className="text-5xl mb-4"
-                whileHover={{ scale: 1.2, rotate: -5 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                📍
-              </motion.div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">Address</h3>
-              <motion.a
-                href={mapUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sky-600 hover:text-cyan-600 font-medium text-sm leading-relaxed inline-block"
-                whileHover={{ scale: 1.05 }}
-              >
-                {address}
-              </motion.a>
-            </motion.div>
-          </div>
-
-          {/* Map */}
-          <div className="mb-12 rounded-2xl overflow-hidden shadow-lg bg-gray-100 flex items-center justify-center" style={{ height: '450px' }}>
-            <div className="text-center p-8">
-              <div className="text-6xl mb-4">📍</div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">{address}</h3>
-              <p className="text-gray-600 mb-6">View our location on Google Maps</p>
-              <a
-                href={mapUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-gradient-to-r from-sky-600 via-cyan-500 to-teal-500 text-white px-6 py-3 rounded-full font-semibold hover:from-sky-700 hover:via-cyan-600 hover:to-teal-600 transition-all shadow-lg hover:shadow-xl"
-              >
-                Open in Google Maps
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Quick Contact Options */}
-      <section className="py-16 bg-gradient-to-b from-white to-sky-50/30">
+             {/* Quick Contact Options */}
+      <section className="py-10 bg-gradient-to-b from-white to-sky-50/30">
         <div className="container mx-auto px-4">
           <motion.div
             className="max-w-4xl mx-auto text-center"
@@ -197,8 +93,29 @@ const Contact = () => {
         </div>
       </section>
 
+          {/* Map */}
+          <div className="mt-10 rounded-2xl overflow-hidden shadow-lg bg-gray-100 flex items-center justify-center" style={{ height: '450px' }}>
+            <div className="text-center p-8">
+              <div className="text-6xl mb-4">📍</div>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">{address}</h3>
+              <p className="text-gray-600 mb-6">View our location on Google Maps</p>
+              <a
+                href={mapUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-gradient-to-r from-sky-600 via-cyan-500 to-teal-500 text-white px-6 py-3 rounded-full font-semibold hover:from-sky-700 hover:via-cyan-600 hover:to-teal-600 transition-all shadow-lg hover:shadow-xl"
+              >
+                Open in Google Maps
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+     
+
       {/* Office Hours */}
-      <section className="py-16 bg-gradient-to-b from-white to-sky-50/30">
+      <section className="py-10 bg-gradient-to-b from-white to-sky-50/30">
         <div className="container mx-auto px-4">
           <motion.div
             className="max-w-4xl mx-auto"
@@ -225,11 +142,11 @@ const Contact = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
                 <div>
                   <p className="font-semibold text-gray-800 mb-2">Monday - Friday</p>
-                  <p className="text-gray-600">9:00 AM - 6:00 PM</p>
+                  <p className="text-gray-600">9:00 AM - 4:00 PM</p>
                 </div>
                 <div>
                   <p className="font-semibold text-gray-800 mb-2">Saturday</p>
-                  <p className="text-gray-600">10:00 AM - 4:00 PM</p>
+                  <p className="text-gray-600">Closed</p>
                 </div>
                 <div>
                   <p className="font-semibold text-gray-800 mb-2">Sunday</p>

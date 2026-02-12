@@ -17,8 +17,8 @@ const Services = () => {
         'Increased independence in daily activities',
         'Family support and training'
       ],
-      duration: 'Sessions typically 45-60 minutes, 1-3 times per week',
-      frequency: 'Individualized based on needs'
+      duration: 'Sessions typically 30-35 minutes',
+      frequency: '5 days a week'
     },
     {
       id: 'speech',
@@ -34,8 +34,8 @@ const Services = () => {
         'Increased confidence in social situations',
         'Parent training for continued support'
       ],
-      duration: 'Sessions typically 30-45 minutes',
-      frequency: '2-3 times per week recommended'
+      duration: 'Sessions typically 30-35 minutes',
+      frequency: '5 days a week'
     },
     {
       id: 'behavioral',
@@ -51,8 +51,8 @@ const Services = () => {
         'Better social interactions',
         'Increased self-confidence'
       ],
-      duration: 'Sessions typically 50-60 minutes',
-      frequency: '1-2 times per week'
+     duration: 'Sessions typically 30-35 minutes',
+      frequency: '5 days a week'
     },
     {
       id: 'play',
@@ -68,8 +68,8 @@ const Services = () => {
         'Better emotional expression',
         'Increased engagement and motivation'
       ],
-      duration: 'Sessions typically 45-50 minutes',
-      frequency: '1-2 times per week'
+duration: 'Sessions typically 30-35 minutes',
+      frequency: '5 days a week'
     },
     {
       id: 'occupational',
@@ -85,8 +85,8 @@ const Services = () => {
         'Improved attention and focus',
         'Increased participation in activities'
       ],
-      duration: 'Sessions typically 45-60 minutes',
-      frequency: '1-2 times per week'
+duration: 'Sessions typically 30-35 minutes',
+      frequency: '5 days a week'
     },
     {
       id: 'parent',
