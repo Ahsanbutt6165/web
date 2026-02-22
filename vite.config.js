@@ -7,7 +7,7 @@ import { resolve } from 'path';
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   build: {
-    outDir: 'build', // <-- change output folder to 'build' for Netlify
+    outDir: 'dist', // Vercel default output directory
   },
   // Optional: if you deploy under a subpath
   // base: '/',
