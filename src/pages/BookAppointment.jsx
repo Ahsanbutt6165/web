@@ -71,9 +71,9 @@ const BookAppointment = () => {
                 </p>
               </motion.a>
 
-              {/* WhatsApp Booking */}
+              {/* WhatsApp Booking — improved pre-filled message */}
               <motion.a
-                href="https://wa.me/923303866245?text=Hello, I would like to book an appointment for my child. Please let me know your available dates and times."
+                href="https://wa.me/923303866245?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20for%20my%20child.%0A%0AChild's%20Name%3A%20%0AAge%3A%20%0AConcern%2FReason%3A%20%0APreferred%20Days%3A%20%0A%0APlease%20let%20me%20know%20the%20available%20time%20slots."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-blue-100 text-center group"
@@ -95,10 +95,37 @@ const BookAppointment = () => {
                 </h3>
                 <p className="text-blue-900 font-bold text-xl mb-3">0330-3866245</p>
                 <p className="text-gray-500 text-sm">
-                  Click to chat on WhatsApp instantly
+                  Click to send a booking request on WhatsApp
                 </p>
+                <div className="mt-4 bg-green-50 border border-green-200 rounded-xl p-3">
+                  <p className="text-green-700 text-xs font-medium">📋 Pre-filled form will open — just fill in your child's details!</p>
+                </div>
               </motion.a>
             </div>
+
+            {/* What to bring / prepare */}
+            <motion.div
+              className="bg-white border border-blue-100 rounded-2xl p-8 shadow-md mb-8"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+            >
+              <h3 className="text-xl font-bold text-blue-900 mb-4 text-center">What to Prepare for Your First Visit</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {[
+                  { icon: '📋', title: 'Medical History', desc: 'Previous diagnoses, reports, or doctor notes if available' },
+                  { icon: '👶', title: 'Child\'s Info', desc: 'Birth date, school details, and developmental milestones' },
+                  { icon: '❓', title: 'Your Questions', desc: 'Any concerns or questions you want to discuss with our team' }
+                ].map((item, i) => (
+                  <div key={i} className="text-center p-4 rounded-xl bg-blue-50/50">
+                    <div className="text-3xl mb-2">{item.icon}</div>
+                    <h4 className="font-semibold text-gray-800 mb-1 text-sm">{item.title}</h4>
+                    <p className="text-gray-500 text-xs">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
 
             {/* Office Hours Info */}
             <motion.div
@@ -114,15 +141,15 @@ const BookAppointment = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
                 <div>
                   <p className="font-semibold text-gray-800 mb-2">Monday - Friday</p>
-                  <p className="text-gray-600">9:00 AM - 4:00 PM</p>
+                  <p className="text-teal-700 font-medium">9:00 AM - 4:00 PM</p>
                 </div>
                 <div>
                   <p className="font-semibold text-gray-800 mb-2">Saturday</p>
-                  <p className="text-gray-600">Closed</p>
+                  <p className="text-red-500 font-medium">Closed</p>
                 </div>
                 <div>
                   <p className="font-semibold text-gray-800 mb-2">Sunday</p>
-                  <p className="text-gray-600">Closed</p>
+                  <p className="text-red-500 font-medium">Closed</p>
                 </div>
               </div>
               <p className="text-sm text-gray-500 mt-6 italic">

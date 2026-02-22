@@ -4,6 +4,25 @@ const Contact = () => {
   const mapUrl = 'https://maps.app.goo.gl/rMNYu5GipfEnmfNb8';
   const address = 'St#6, Sector A, Bahria Enclave, Islamabad';
 
+  const faqs = [
+    {
+      q: 'How do I know if my child needs therapy?',
+      a: 'If you notice delays in speech, social interaction, behavior, or development compared to peers, it\'s worth getting a professional assessment. Early intervention makes a significant difference.'
+    },
+    {
+      q: 'What age groups do you work with?',
+      a: 'We work with children from 2 to 18 years of age across all our services.'
+    },
+    {
+      q: 'How long does a typical therapy program last?',
+      a: 'Duration varies based on the child\'s needs and goals. We assess progress regularly and adjust the program accordingly.'
+    },
+    {
+      q: 'Can parents sit in during sessions?',
+      a: 'Yes, we encourage parental involvement. For many therapies, parent participation is a key part of the process.'
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -44,7 +63,7 @@ const Contact = () => {
               Choose Your Preferred Contact Method
             </h2>
             <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
-              We're here to help! Reach out to us through any of these convenient ways. Click on any option below to get in touch instantly.
+              We're here to help! Reach out through any of these convenient ways.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
@@ -121,10 +140,41 @@ const Contact = () => {
         </div>
       </section>
 
-     
+      {/* FAQ Section — fills the empty gap */}
+      <section className="py-16 bg-gradient-to-b from-white to-blue-50/30">
+        <div className="container mx-auto px-4">
+          <motion.h2
+            className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-900 to-teal-600 bg-clip-text text-transparent text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            Frequently Asked Questions
+          </motion.h2>
+          <div className="max-w-3xl mx-auto space-y-4">
+            {faqs.map((faq, index) => (
+              <motion.div
+                key={index}
+                className="bg-white rounded-2xl p-6 shadow-md border border-blue-100"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ y: -3 }}
+              >
+                <h3 className="font-semibold text-blue-900 mb-2 flex items-start gap-2">
+                  <span className="text-teal-500 mt-0.5">Q.</span>
+                  {faq.q}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed pl-5">{faq.a}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Office Hours */}
-      <section className="py-10 bg-gradient-to-b from-white to-blue-50/30">
+      <section className="py-10 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
             className="max-w-4xl mx-auto"
@@ -151,15 +201,15 @@ const Contact = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
                 <div>
                   <p className="font-semibold text-gray-800 mb-2">Monday - Friday</p>
-                  <p className="text-gray-600">9:00 AM - 4:00 PM</p>
+                  <p className="text-teal-700 font-medium">9:00 AM - 4:00 PM</p>
                 </div>
                 <div>
                   <p className="font-semibold text-gray-800 mb-2">Saturday</p>
-                  <p className="text-gray-600">Closed</p>
+                  <p className="text-red-500 font-medium">Closed</p>
                 </div>
                 <div>
                   <p className="font-semibold text-gray-800 mb-2">Sunday</p>
-                  <p className="text-gray-600">Closed</p>
+                  <p className="text-red-500 font-medium">Closed</p>
                 </div>
               </div>
               <p className="text-sm text-gray-500 mt-6 italic">

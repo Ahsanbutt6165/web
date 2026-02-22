@@ -2,6 +2,24 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const About = () => {
+  const teamMembers = [
+    {
+      role: 'Clinical Psychologist',
+      icon: '👩‍⚕️',
+      description: 'Specializing in child behavioral assessment, autism spectrum disorders, and evidence-based therapeutic interventions.'
+    },
+    {
+      role: 'Speech & Language Therapist',
+      icon: '🗣️',
+      description: 'Expert in communication disorders, language delays, and articulation therapy for children of all ages.'
+    },
+    {
+      role: 'Occupational Therapist',
+      icon: '🎨',
+      description: 'Focused on sensory integration, fine motor skills, and helping children achieve independence in daily activities.'
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -43,7 +61,7 @@ const About = () => {
                 Our Mission
               </h2>
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed text-center">
-                To empower children with psychological and developmental challenges by providing holistic care, early intervention, and family support—helping every child grow with confidence and dignity.
+                To empower children with psychological and developmental challenges by providing holistic care, early intervention, and family support — helping every child grow with confidence and dignity.
               </p>
             </motion.div>
 
@@ -58,56 +76,25 @@ const About = () => {
               <div>
                 <h3 className="text-2xl font-bold text-gray-800 mb-4">Our Values</h3>
                 <ul className="space-y-3 text-gray-600">
-                  <motion.li
-                    className="flex items-start"
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    <span className="text-teal-600 mr-3 font-bold">✓</span>
-                    <span><strong>Compassion:</strong> We approach every child and family with empathy, understanding, and genuine care.</span>
-                  </motion.li>
-                  <motion.li
-                    className="flex items-start"
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    <span className="text-teal-600 mr-3 font-bold">✓</span>
-                    <span><strong>Excellence:</strong> We maintain the highest standards in our therapeutic interventions and care delivery.</span>
-                  </motion.li>
-                  <motion.li
-                    className="flex items-start"
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    <span className="text-teal-600 mr-3 font-bold">✓</span>
-                    <span><strong>Inclusion:</strong> We celebrate diversity and ensure every child feels valued and respected.</span>
-                  </motion.li>
-                  <motion.li
-                    className="flex items-start"
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    <span className="text-teal-600 mr-3 font-bold">✓</span>
-                    <span><strong>Collaboration:</strong> We work closely with families, schools, and other professionals to ensure comprehensive support.</span>
-                  </motion.li>
-                  <motion.li
-                    className="flex items-start"
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    <span className="text-teal-600 mr-3 font-bold">✓</span>
-                    <span><strong>Growth:</strong> We believe in continuous learning and improvement to better serve our community.</span>
-                  </motion.li>
+                  {[
+                    { title: 'Compassion', desc: 'We approach every child and family with empathy, understanding, and genuine care.' },
+                    { title: 'Excellence', desc: 'We maintain the highest standards in our therapeutic interventions and care delivery.' },
+                    { title: 'Inclusion', desc: 'We celebrate diversity and ensure every child feels valued and respected.' },
+                    { title: 'Collaboration', desc: 'We work closely with families, schools, and other professionals to ensure comprehensive support.' },
+                    { title: 'Growth', desc: 'We believe in continuous learning and improvement to better serve our community.' },
+                  ].map((value, i) => (
+                    <motion.li
+                      key={value.title}
+                      className="flex items-start"
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: i * 0.1 }}
+                    >
+                      <span className="text-teal-600 mr-3 font-bold">✓</span>
+                      <span><strong>{value.title}:</strong> {value.desc}</span>
+                    </motion.li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -149,31 +136,68 @@ const About = () => {
                   {item.icon}
                 </motion.div>
                 <h3 className="text-xl font-semibold text-blue-900 mb-3">{item.title}</h3>
-                <p className="text-gray-600">
-                  {item.desc}
-                </p>
+                <p className="text-gray-600">{item.desc}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Team Section — Improved */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-900 to-teal-600 bg-clip-text text-transparent text-center mb-12">
+          <motion.h2
+            className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-900 to-teal-600 bg-clip-text text-transparent text-center mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
             Our Team
-          </h2>
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-lg text-gray-600 mb-8">
-              Our dedicated team of experienced child psychologists, therapists, and support staff are passionate about helping children succeed. We bring years of expertise, warm hearts, and a commitment to excellence.
-            </p>
-            <div className="bg-gradient-to-br from-blue-50 to-teal-50 p-8 rounded-2xl border border-blue-100">
-              <p className="text-gray-600 italic">
-                "We are a team of compassionate professionals dedicated to creating positive change in children's lives. Our multidisciplinary approach ensures comprehensive care for every child we serve."
-              </p>
-            </div>
+          </motion.h2>
+          <motion.p
+            className="text-center text-gray-600 mb-12 max-w-2xl mx-auto"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            Our multidisciplinary team of specialists works together to deliver comprehensive, compassionate care for every child.
+          </motion.p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {teamMembers.map((member, index) => (
+              <motion.div
+                key={member.role}
+                className="bg-gradient-to-br from-blue-50 to-teal-50 p-8 rounded-2xl border border-blue-100 text-center shadow-md"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.15 }}
+                whileHover={{ y: -8, boxShadow: '0 20px 25px -5px rgba(0,0,0,0.1)' }}
+              >
+                <motion.div
+                  className="text-6xl mb-4"
+                  whileHover={{ scale: 1.2 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
+                >
+                  {member.icon}
+                </motion.div>
+                <h3 className="text-lg font-bold text-blue-900 mb-3">{member.role}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{member.description}</p>
+              </motion.div>
+            ))}
           </div>
+
+          <motion.div
+            className="mt-10 bg-gradient-to-br from-blue-50 to-teal-50 p-8 rounded-2xl border border-blue-100 max-w-3xl mx-auto text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 }}
+          >
+            <p className="text-gray-600 italic text-lg">
+              "We are dedicated professionals committed to creating positive change in children's lives. Our combined expertise ensures every child receives the right support at the right time."
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -200,17 +224,17 @@ const About = () => {
               <p className="text-gray-600 mb-4 italic">
                 "The team's dedication and expertise have transformed our daughter's communication skills. We're so grateful for their support."
               </p>
-              <p className="text-gray-800 font-semibold">— Parent of a 8-year-old</p>
+              <p className="text-gray-800 font-semibold">— Parent of an 8-year-old</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 bg-gradient-to-r from-blue-900 via-blue-800 to-teal-700 text-white relative overflow-hidden">
+      {/* CTA — Rose/warm gradient to differentiate from hero */}
+      <section className="py-16 bg-gradient-to-r from-rose-600 via-pink-500 to-orange-400 text-white relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
-            className="absolute bottom-0 right-0 w-96 h-96 bg-teal-300/10 rounded-full blur-3xl"
+            className="absolute bottom-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"
             animate={{ scale: [1, 1.4, 1], x: [0, -50, 0] }}
             transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
           />
@@ -223,16 +247,16 @@ const About = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Learn More?
+            Ready to Begin Your Child's Journey?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Get in touch with us to discuss how we can support your child's journey.
+            Get in touch with us to discuss how we can support your child's growth and development.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
                 to="/book-appointment"
-                className="inline-block bg-white text-teal-600 px-8 py-3 rounded-full font-semibold shadow-xl hover:shadow-2xl transition-all duration-300"
+                className="inline-block bg-white text-rose-600 px-8 py-3 rounded-full font-semibold shadow-xl hover:shadow-2xl transition-all duration-300"
               >
                 Book Appointment
               </Link>
